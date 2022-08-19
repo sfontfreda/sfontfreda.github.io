@@ -1,34 +1,86 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 
 :root {
-    --main-bg-color: #e0e5ec;
-    --secondary-bg-color: #ececec;
-    --text-color: #d7dee1;
+    --main-bg-color-bright: #e0e5ec;
+    --secondary-bg-color-bright: #ececec;
+    --text-color-light: #d7dee1;
+
+    --main-bg-color-dark: #181a1c;
+    --secondary-bg-color-dark: #1b1717;
+    --text-color-dark: #0c0c0c;
 }
 
-body { 
-    background: -webkit-linear-gradient(-75deg,  var(--main-bg-color) 20%, var(--secondary-bg-color) 100%);
-  }
-  
-.main {
-    position: absolute;
-    top: 50%; 
-    right: 50%;
-    transform: translate(50%,-50%);
-    text-align: center;
-    font-family: 'Libre Baskerville';
-    color: var(--text-color);
+body {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
 }
-  
- h1 {
-    text-shadow: 0 2px 3px rgba(255, 255, 255, 0.3), 0 -1px 2px rgba(0, 0, 0, 0.2);
+
+h1 {
     font-size: 6em;
     font-weight: 600;
 }
 
- h2 {
-    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.3), 0 -1px 2px rgba(0, 0, 0, 0.2);
+h2 {
     opacity: 0.5;
     font-size: 3em;
     font-weight: 300;
+}
+
+img {
+    opacity: 0.3;
+}
+
+img:hover {
+    cursor: pointer;
+    opacity: 0.7;
 }  
+
+#main {    
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    font-family: 'Libre Baskerville';
+}
+
+.text {
+    top: 50%;
+    right: 50%;
+    position: absolute;
+    transform: translate(50%,-50%);
+}
+
+/* LIGHT MODE */
+
+.light {
+
+    color: var(--text-color-light);
+    background: -webkit-linear-gradient(-75deg,  var(--main-bg-color-bright) 20%, var(--secondary-bg-color-bright) 100%);
+
+}
+
+.light h2 {
+    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.3), 0 -1px 2px rgba(0, 0, 0, 0.2);    
+} 
+
+.light h1 {
+    text-shadow: 0 2px 3px rgba(255, 255, 255, 0.3), 0 -1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* DARK MODE */
+
+.dark img {
+    opacity: 0.4;
+}
+
+.dark img:hover {
+    filter:contrast(0.3)
+}
+
+.dark {
+    color: var(--text-color-dark);
+    background: -webkit-linear-gradient(-75deg,  var(--main-bg-color-dark) 20%, var(--secondary-bg-color-dark) 100%);
+
+}
+
